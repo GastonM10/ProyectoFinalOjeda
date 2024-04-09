@@ -11,7 +11,7 @@ git commit -m "Comentario"
 git remote remove origin
 
 -- Añadir repositorio
-git remote add origin https://github.com/GastonM10/GastonOjeda-PreEntrega3.git
+git remote add origin https://github.com/GastonM10/ProyectoFinal-Ojeda.git
 
 -- Git push
 git push -u origin main
