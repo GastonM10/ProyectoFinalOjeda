@@ -67,9 +67,9 @@ document.addEventListener("DOMContentLoaded", function() {
             // Agrego los productos a la tabla
             document.getElementById("contenidotienda").innerHTML +=
             `
-            <div class="col-6 p-2 mx-auto text-center">
+            <div class="col-6 p-2 mx-auto text-center my-auto">
                 <article class="card bg-primary flex-row text-white">
-                    <img src="${producto.foto}" class="card-img-top" style="width:220px" />
+                    <img src="${producto.foto}" class="card-img-top d-inline-block" style="width:220px" />
                     <div class="my-auto card-body">
                         <h3 class="card-title">${producto.nombre}</h3>
                         <p class="card-text">${"$ " + producto.precio}</p>
