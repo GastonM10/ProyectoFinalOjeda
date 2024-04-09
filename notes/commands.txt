@@ -1,0 +1,17 @@
+-- Seteo de rama
+git branch -M main
+
+-- Añadir todos los archivos para subir
+git add .
+
+-- Commit
+git commit -m "Comentario"
+
+-- Remover repositorio existente
+git remote remove origin
+
+-- Añadir repositorio
+git remote add origin https://github.com/GastonM10/GastonOjeda-PreEntrega3.git
+
+-- Git push
+git push -u origin main

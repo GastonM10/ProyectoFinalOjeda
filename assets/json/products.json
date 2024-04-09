@@ -1,0 +1,38 @@
+[
+	{
+		"id": 1,
+		"foto": "./assets/img/traslado_pque.jpg",
+		"nombre": "Transporte y Acceso",
+		"precio": 10990
+	},
+	{
+		"id": 2,
+		"foto": "./assets/img/charter.jpg",
+		"nombre": "Transporte Charter",
+		"precio": 2500
+	},
+	{
+		"id": 3,
+		"foto": "./assets/img/parque_div.jpg",
+		"nombre": "Acceso al parque",
+		"precio": 8500
+	},
+	{
+		"id": 4,
+		"foto": "./assets/img/transporte.jpg",
+		"nombre": "Transporte Omnibus",
+		"precio": 4000
+	},
+	{
+		"id": 5,
+		"foto": "./assets/img/bebida.jpg",
+		"nombre": "Bebida (a elección)",
+		"precio": 1200
+	},
+	{
+		"id": 6,
+		"foto": "./assets/img/sandwich.jpg",
+		"nombre": "Sandwich (a elección)",
+		"precio": 2200
+	}
+]
