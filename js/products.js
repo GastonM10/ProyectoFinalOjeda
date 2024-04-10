@@ -67,19 +67,23 @@ document.addEventListener("DOMContentLoaded", function() {
             // Agrego los productos a la tabla
             document.getElementById("contenidotienda").innerHTML +=
             `
-            <div class="col-6 p-2 mx-auto text-center my-auto">
-                <article class="card bg-primary flex-row text-white">
-                    <img src="${producto.foto}" class="card-img-top d-inline-block" style="width:220px" />
-                    <div class="my-auto card-body">
-                        <h3 class="card-title">${producto.nombre}</h3>
-                        <p class="card-text">${"$ " + producto.precio}</p>
-                        <p hidden="hidden" class="card-id">${producto.id}</p>
-                        <button class="btn btn-success addBtn">+</button>
-                        <input size="2" class="col-sm-1 text-white text-center bg-primary no-border" value="0" readonly></input>
-                        <button class="btn btn-danger remBtn">-</button>
-                        <button class="btn btn-secondary toCart">Añadir a Carrito</button>
+            <div class="card mb-3 mx-auto bg-warning" style="max-width: 440px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 my-auto">
+                        <img src="${producto.foto}" class="card-img d-inline-block p-1 rounded-3">
                     </div>
-                </article>
+                    <div class="col-md-8 p-2">
+                        <div class="card-body p-2">
+                            <h5 class="card-title fs-4">${producto.nombre}</h5>
+                            <p class="card-text fs-4">${"$ " + producto.precio}</p>
+                            <p hidden="hidden" class="card-id">${producto.id}</p>
+                            <button class="btn btn-success addBtn"><i class="bi bi-plus-lg"></i></button>
+                            <input size="2" class="col-sm-1 text-black text-center bg-warning no-border fs-5" value="0" readonly></input>
+                            <button class="btn btn-danger remBtn"><i class="bi bi-dash"></i></button>
+                            <button class="btn btn-primary toCart">Añadir a Carrito</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             `
 
@@ -190,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function() {
             Toastify({
                 text: "🛒 Se agregó al carrito ✔️\n▶️ " + producto.nombre + " x" + producto.cantidad + " " + textUnit + " ",
                 style: {
-                    background: "linear-gradient(to right, #FFF932, #FFFA59)",
+                    background: "linear-gradient(to right, #57FF10, #6EFF30)",
                     color: "#313131"
                 },
                 destination: "./pages/cart.html",
@@ -213,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function() {
         Toastify({
             text: "🛒 Se agregó al carrito ✔️\n▶️ " + dataOffer.nombre,
             style: {
-                background: "linear-gradient(to right, #FFF932, #FFFA59)",
+                background: "linear-gradient(to right, #57FF10, #6EFF30)",
                 color: "#313131"
             },
             destination: "./pages/cart.html",
