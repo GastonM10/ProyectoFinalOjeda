@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	window.addEventListener('storage', handleStorageChange);
 
     // Declaro variales
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     let addOffer = JSON.parse(localStorage.getItem("addOffer")) || [];
     let data = "";
     let cantIndex = 0;
@@ -23,6 +23,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Contabilizo los índices para poder borrar productos en caso de ser necesario
     for(const indice of carrito) {
         cantIndex = indice.index;
+    }
+
+    if(carrito.length > 0){
+        document.getElementById("menuCart").innerHTML += " (" + carrito.length + ")";
     }
 
     // Productos generales
@@ -158,6 +162,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     cantidad: quantity
                 };
 
+                cantCart = carrito.length + 1;
+                document.getElementById("menuCart").innerHTML = "Carrito 🛒 (" + cantCart + ")";
+
                 agregarAlCarrito(product);
 
                 // cantIndex = cantIndex++;
@@ -237,6 +244,9 @@ document.addEventListener("DOMContentLoaded", function() {
             precio: dataOffer.precio,
             cantidad: 1
         };
+
+        cantCart = carrito.length + 1;
+        document.getElementById("menuCart").innerHTML = "Carrito 🛒 (" + cantCart + ")";
 
         carrito.push(productOffer);
         localStorage.setItem("carrito",JSON.stringify(carrito));

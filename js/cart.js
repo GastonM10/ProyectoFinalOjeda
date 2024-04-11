@@ -34,6 +34,9 @@ function init() {
 				`
 				emptyCart();
 				payCart();	
+
+				document.getElementById("menuCart").innerHTML += " (" + carrito.length + ")";
+
 			}
 
 			// Llamo a las funciones necesarias para agregar botones de:
@@ -163,8 +166,13 @@ function init() {
 							
 									// Actualizo el texto del total a pagar
 									totalCompra.innerHTML = `Total a pagar💲${resultado}`;
-								}
 
+									// Actualizo el texto del menú
+									document.getElementById("menuCart").innerHTML = "Carrito 🛒";
+								}else{
+									document.getElementById("menuCart").innerHTML = "Carrito 🛒 (" + carrito.length + ")";
+								}
+								
 								// Llamo a la función para comenzar nuevamente
 								init();
 							
@@ -227,6 +235,9 @@ function init() {
 							
 							// Elimino los botones de Pagar / Vaciar carrito
 							document.getElementById("btnsCart").innerHTML = "";
+
+							// Actualizo el texto del menú
+							document.getElementById("menuCart").innerHTML = "Carrito 🛒";
 							
 							// Llamo a la función para comenzar nuevamente
 							init();
@@ -272,6 +283,9 @@ function init() {
 							
 							// Actualizo el texto del total a pagar
 							totalCompra.innerHTML = `Total a pagar💲${resultado}`;
+
+							// Actualizo el texto del menú
+							document.getElementById("menuCart").innerHTML = "Carrito 🛒";
 							
 							// Elimino los botones de Pagar / Vaciar carrito
 							document.getElementById("btnsCart").innerHTML = "";
